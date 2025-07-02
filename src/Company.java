@@ -1,25 +1,25 @@
 import taxes.TaxSystem;
 
 public class Company {
-        private String title;
-        private int debit;
-        private int credit;
-        private TaxSystem taxSystem;
+    private String title;
+    private int debit;
+    private int credit;
+    private TaxSystem taxSystem;
 
     public Company(String title, TaxSystem taxSystem) {
-            this.title = title;
-            this.taxSystem = taxSystem;
-            this.debit = 0;
-            this.credit = 0;
+        this.title = title;
+        this.taxSystem = taxSystem;
+        this.debit = 0;
+        this.credit = 0;
 
     }
 
     public void shiftMoney(int amount) {
-      if (amount > 0) {
-          debit += amount;
-      } else if (amount < 0) {
-          credit = Math.abs(amount);
-      }
+        if (amount > 0) {
+            debit += amount;
+        } else if (amount < 0) {
+            credit = Math.abs(amount);
+        }
     }
 
     public void setTaxSystem(TaxSystem taxSystem) {
